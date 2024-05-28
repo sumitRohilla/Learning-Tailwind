@@ -13,13 +13,16 @@
 
 • Install tailwindcss via npm, and create your tailwind.config.js file.
 
+```
 npm install -D tailwindcss
 npx tailwindcss init
+```
 
 ## Configure your template paths :
 
 • Add the paths to all of your template files in your tailwind.config.js file.
 
+```
 /** @type {import('tailwindcss').Config} \*/
 module.exports = {
 content: ["./src/**/\*.{html,js}"],
@@ -28,29 +31,38 @@ extend: {},
 },
 plugins: [],
 }
+```
 
 ## Add the Tailwind directives to your CSS :
 
 • Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
 
+```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 
 ## Start the Tailwind CLI build process :
 
 • Run the CLI tool to scan your template files for classes and build your CSS.
 
+```
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+```
 
 • OR Create custom script in package.json file
 
+```
 "build": "tailwindcss -i ./style.css -o ./css/main.css",
 "watch": "tailwindcss -i ./style.css -o ./css/main.css --watch"
+```
 
 • Use below COMMOND to start build process
 
+```
 npm run build / npm build watch
+```
 
 ## FRONT-END :
 
